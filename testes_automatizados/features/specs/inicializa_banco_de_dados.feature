@@ -1,26 +1,20 @@
 # language: pt
 
 @regression
-@init_database
+@initialize_database #essa tag fica antes de todos que vão precisar do login criado no cenário de testes
 
-Funcionalidade: Menu do cabeçalho na home
+Funcionalidade: Inicializar o banco de dados
     COMO um usuário do banco ParaBank
-    QUERO poder utilizar o menu inicial
-    PARA poder acessar as funções disponíveis sem estar logado
+    QUERO poder utilizar a funcionalidade de criar um cadastro
+    PARA poder ter o meu login salvo no banco de dados
 
 Contexto: Estar na home sem estar logado
     Dado que esteja na home
-    E não esteja logado
+    E não esteja logado #se estiver logado click 'log out'
 
-Cenário: Acessando os itens do menu esquerdo
-Quando clicar na opção do menu
-Então deverá direcionar para outra página
+Cenário: Inicializando o banco de dados
+Quando clicar na opção "<Admin_page>"
+E clicar em "<initialize>"
+Então deverá aparecer "<Database Initialized>" #String
 
-@to_outside_parabank
-Esquema do Cenário: Acessando opções que direcionam para fora da aplicação
-    Quando clicar em "<opções_especiais>"
-    Então deverá direcionar para fora da plataforma
-
-|  opções_especiais |
-|Products           |
-|Locations          |
+#aqui eu fiz a lógica, preciso validar mas acredito que não esteja funcional

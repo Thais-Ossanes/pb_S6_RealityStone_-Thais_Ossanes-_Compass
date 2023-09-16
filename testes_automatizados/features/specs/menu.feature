@@ -1,7 +1,9 @@
 # language: pt
 
 @regression
+@initialize_database
 @menu_home
+
 Funcionalidade: Menu do cabeçalho na home
     COMO um usuário do banco ParaBank
     QUERO poder utilizar o menu inicial

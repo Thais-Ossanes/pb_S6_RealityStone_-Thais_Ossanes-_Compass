@@ -1,7 +1,7 @@
 # language: pt
 
 @regression
-@init_database
+@initialize_database
 @login
 
 Funcionalidade: Realizar o login
