@@ -1,7 +1,5 @@
 Dado('que esteja na home') do
-    ende = Endereco.new
-    Endereco.app_host
-    binding.pry
+    
 end
   
 Dado('não esteja logado') do

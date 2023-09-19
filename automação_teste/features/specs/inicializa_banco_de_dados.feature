@@ -12,8 +12,11 @@ Contexto: Estar na home
     Dado que esteja na home 
 
 Cenário: Chegando no banco de dados
-Quando clicar na opção "<Admin_page>"
-E clicar em "<initialize>"
-Então deverá aparecer "<Database Initialized>" #String
+Quando clicar na opção Admin_page
+Então deverá aparecer  direcionar para a página de admnistrador 
+
+Cenário: Iniciando o banco de dados
+Quando cliclar em initialize
+Então deverá aparecer a mensagem "<Database Initialized>"
 
 #aqui eu fiz a lógica, preciso validar mas acredito que não esteja funcional

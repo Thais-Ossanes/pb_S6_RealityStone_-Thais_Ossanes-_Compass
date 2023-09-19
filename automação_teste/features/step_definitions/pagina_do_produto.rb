@@ -1,6 +1,6 @@
 Quando('acessar a páginado produto') do
     #@search_results_page.products.first.name.click #assim ele acessa a pagina do produto PDP
-    @search_results_page.access_product_page(1) #novo método que faz o igual ao de cima mas está refatorado
+    @search_results_page.access_product_page #novo método que faz o igual ao de cima mas está refatorado
     @product_page = Pages::ProductPage.new
     #binding.pry
 end

@@ -6,30 +6,17 @@ require 'rspec'
 require 'site_prism'
 require 'pry'
 
-#ENVIRONMENT = ENV['ENVIRONMENT']
-#ENVIRONMENT_CONFIG = YAML.load_file(File.dirname(__FILE__) + "/environment/#{ENVIRONMENT}.yml")
-#puts ENVIRONMENT_CONFIG # ele printa isso no terminal {"url"=>"https://www.google.com.br"}
-#URL = url: 'https://parabank.parasoft.com/parabank/index.htm'
+ENVIRONMENT = ENV['ENVIRONMENT']
+ENVIRONMENT_CONFIG = YAML.load_file(File.dirname(__FILE__) + "/environment/#{ENVIRONMENT}.yml")
+puts ENVIRONMENT_CONFIG # {"url"=>"https://www.google.com.br"}
+URL = ENVIRONMENT_CONFIG['url']
 
-#NOTE: código do colega Gian, explicado em: branch z_aulas -> z_bibliografia_de_pesquisa/README.md
 Capybara.register_driver :my_chrome do |app|
   options = Selenium::WebDriver::Chrome::Options.new
-  options.add_argument('--incognito')
-  options.add_argument('--start-maximized')
-  options.add_argument('--window-size-1420-835')
-  options.add_argument('--ignore-ssl-errors')
-  options.add_argument('--ignore-certificate-errors')
-  options.add_argument('--disable-popup-blocking')
-  options.add_argument('--no-sandbox')
-  options.add_argument('--acceptInsecureCerts=true')
-  options.add_argument('--disable-gpu')
-  options.add_argument('--disable-translate')
-  options.add_argument('--disable-impl-side-painting')
-  options.add_argument('--debug_level=3')
-
+  options.add_argument('--incognito --start-maximized --ignore-ssl-errors --ignore-certificate-errors --disable-popup-blocking --no-sandbox --acceptInsecureCerts=true --disable-gpu --disable-translate --disable-impl-side-painting --debug_leveç=3')
+  
   if ENV['HEADLESS']
-    options.add_argument('--headless')
-    options.add_argument('--disable-site-isolation-trials')
+    options.add_argument('--headless --disable-site-isolation-trials')
   end
 
   client = Selenium::WebDriver::Remote::Http::Default.new
@@ -37,11 +24,8 @@ Capybara.register_driver :my_chrome do |app|
   Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
 end
 
-#testar isso que está acima de outra forma / outras tags
-#---------------------------------------------------------------------------
-
 Capybara.default_driver = :my_chrome
-Capybara.app_host = 'https://parabank.parasoft.com/parabank/index.htm'
+Capybara.app_host = URL
 Capybara.default_max_wait_time = 10
 
 
