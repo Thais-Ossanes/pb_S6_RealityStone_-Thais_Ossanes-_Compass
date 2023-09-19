@@ -1,0 +1,7 @@
+valid_product: 'SPEAKERS' #colocando assim ele chama exatamente o que está entre aspas
+#valid_product: 'TABLETS' #se eu colocar duas chamadas ele valida só a última
+
+
+user_for_login:
+  email: 'teste@compass.com.br'
+  password: '123456&'

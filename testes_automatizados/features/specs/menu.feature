@@ -13,9 +13,10 @@ Contexto: Estar na home sem estar logado
     Dado que esteja na home
     E não esteja logado
 
+@click_items
 Cenário: Acessando os itens do menu esquerdo
-Quando clicar na opção do menu
-Então deverá direcionar para outra página
+    Quando clicar na opção do menu
+    Então deverá direcionar para outra página
 
 @to_outside_parabank
 Esquema do Cenário: Acessando opções que direcionam para fora da aplicação
