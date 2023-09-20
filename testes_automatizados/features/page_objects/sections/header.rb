@@ -3,10 +3,14 @@ module Sections
 
         element :btn_admin_page, 'a[href="admin.htm"]'
         element :btn_initialize_database, "button[value='INIT']"
-        element :success_message, "body > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > p:nth-child(2) > b:nth-child(1)"
+        #element :success_message, "body > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > p:nth-child(2) > b:nth-child(1)"
+        
+        elements :items_menu_center, '.leftmenu li'
+
+        element :about_us, 'title'
         
         
-        
+
         #element :input_search, '#autoComplete'
         #element :close_serch, 'img[src$= "closeDark.png"]'
 

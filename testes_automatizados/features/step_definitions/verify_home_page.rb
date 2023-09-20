@@ -1,5 +1,5 @@
 Dado('que esteja na home')do
-    @home_page = Home.new
+    @home_page = Pages::Home.new
     @home_page.load
 end
 

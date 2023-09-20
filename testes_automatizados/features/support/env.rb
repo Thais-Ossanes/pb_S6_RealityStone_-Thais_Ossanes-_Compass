@@ -8,7 +8,7 @@ require 'pry'
 
 ENVIRONMENT = ENV['ENVIRONMENT']
 ENVIRONMENT_CONFIG = YAML.load_file(File.dirname(__FILE__) + "/environment/#{ENVIRONMENT}.yml")
-puts ENVIRONMENT_CONFIG # {"url"=>"https://www.google.com.br"}
+puts ENVIRONMENT_CONFIG # {"url"=>"https://parabank.parasoft.com/parabank/index.htm"}
 URL = ENVIRONMENT_CONFIG['url']
 
 Capybara.register_driver :my_chrome do |app|
