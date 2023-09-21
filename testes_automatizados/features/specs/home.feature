@@ -12,12 +12,23 @@ Cenário: Validações da home
     Então deverá conter o menu central    
 
 @testing_menu_left
-Cenário: Testando menu esquerdo do header
-    Quando clicar na opção do menu <opcao_menu>
-    Então deverá direcionar para a página <pagina_desejada>
+    Esquema do Cenário: Testando menu esquerdo do header
+        Quando clicar na opção do menu <opcao_menu>
+        Então deverá direcionar para fora da home 
 
-  Exemplos:
-    | opcao_menu   | pagina_desejada    |
-    | About_Us     | /pagina-desejada-1 |
-    | Services     | /pagina-desejada-2 |
-    | Admin_Page   | /pagina-desejada-3 |
+    Exemplos:
+        | opcao_menu        | 
+        | primeira_opcao    |
+        | segunda_opcao     | 
+        | terceira_opcao    | 
+
+@default_login
+    Esquema do Cenário: Realizando login com usuário cadastrado
+        Quando inserir um username cadastrado "<username>"
+        E inserir um password "<password>" cadastrado
+        E clicar no botão de login
+        Então deverá conter a mensagem de sucesso do login
+
+        Exemplos:
+        |username   |password   |
+        |john       |demo       |
