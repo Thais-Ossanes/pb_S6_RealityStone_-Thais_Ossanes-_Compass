@@ -8,6 +8,9 @@ Esta o mapa mental, usado como base para o desenvolvimento dos testes.
 ### ↳ plano_de_testes ###
 Está toda a documentação realizada previamente à automação,
 
+### ↳ testes_automatizados ###
+Aqui contém todos os testes desenvolvidos e implementados. Logo abaixo estão as instuções para poder exercutar na sua máquina.
+
 ----
 
 # Instruções Gerais para o Funcionamento dos Testes Automatizados ⇩⇩

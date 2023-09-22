@@ -49,12 +49,15 @@ GEM
     method_source (1.0.0)
     mini_mime (1.1.5)
     multi_test (1.1.0)
+    nio4r (2.5.9)
     nokogiri (1.15.4-x64-mingw-ucrt)
       racc (~> 1.4)
     pry (0.14.2)
       coderay (~> 1.1)
       method_source (~> 1.0)
     public_suffix (5.0.3)
+    puma (6.4.0)
+      nio4r (~> 2.0)
     racc (1.7.1)
     rack (3.0.8)
     rack-test (2.1.0)
@@ -79,6 +82,8 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
+    sinatra (1.0)
+      rack (>= 1.0)
     site_prism (4.0.3)
       addressable (~> 2.8)
       capybara (~> 3.27)
@@ -94,13 +99,18 @@ PLATFORMS
   x64-mingw-ucrt
 
 DEPENDENCIES
+  bundler (< 3.0)
   capybara
   cucumber
   faker
   pry
+  puma
+  rack
   rspec
   selenium-webdriver
+  sinatra
   site_prism
+  xpath
 
 BUNDLED WITH
    2.4.19

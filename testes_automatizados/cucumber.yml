@@ -1,6 +1,7 @@
 
-default: --format pretty -p prd -p chrome -p html
-default_hml: -p hml p chrome
+default: --format pretty -p prd -p chrome -p firefox -p html
+#testing: --format pretty -p firefox
+default_hml: -p hml -p chrome
 
 #Reporters
 html: --format html --out=reports/report.html
@@ -11,6 +12,7 @@ prd: ENVIRONMENT="prd"
 
 #browsers
 chrome: BROWSER="chrome"
+firefox: BROWSER="firefox"
 
 #visual mode
 headless: HEADLESS="true"

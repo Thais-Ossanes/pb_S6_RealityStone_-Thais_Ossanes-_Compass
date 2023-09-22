@@ -24,6 +24,13 @@ Capybara.register_driver :my_chrome do |app|
   Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
 end
 
+Capybara.register_driver :firefox do |app|
+  Capybara::Selenium::Driver.new(app, browser: :firefox)
+  options.add_argument('--disable-translate --disable-impl-side-painting --debug_leveç=3')
+  client = Selenium::WebDriver::Remote::Http::Default.new
+  client.read_timeout = 90
+end
+
 Capybara.default_driver = :my_chrome
 Capybara.app_host = URL
 Capybara.default_max_wait_time = 10
