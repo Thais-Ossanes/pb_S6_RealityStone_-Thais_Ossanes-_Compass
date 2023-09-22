@@ -16,5 +16,5 @@ Contexto: Estar na home sem estar logado
 Cenário: Inicializando o banco de dados
 Quando clicar na opção  da página de administrador 
 E clicar para iniciar o banco de dados 
-Então deverá aparecer a mensagem de sucesso "<Database Initialized>" 
+Então deverá aparecer a mensagem de sucesso "Database Initialized" 
 

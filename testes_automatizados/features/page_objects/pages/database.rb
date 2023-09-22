@@ -1,8 +1,9 @@
 module Pages
     class Database < SitePrism::Page
-        set_url '/db.htm'
+        set_url '/admin.htm'
 
-        element :btn_initialize_database, "//button[normalize-space()='Initialize']"
+        element :btn_initialize_database, "button[value='INIT']"
+        element :success_message, "div#rightPanel p b"
         
     end
 end
