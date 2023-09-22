@@ -10,11 +10,11 @@ Funcionalidade: Inicializar o banco de dados
 
 Contexto: Estar na home sem estar logado
     Dado que esteja na home
-    E não esteja logado #se estiver logado click 'log out'
+    E não esteja logado 
 
+@init_db
 Cenário: Inicializando o banco de dados
-Quando clicar na opção "<Admin_page>"
-E clicar em "<initialize>"
-Então deverá aparecer "<Database Initialized>" #String
+Quando clicar na opção  da página de administrador 
+E clicar para iniciar o banco de dados 
+Então deverá aparecer a mensagem de sucesso "<Database Initialized>" 
 
-#aqui eu fiz a lógica, preciso validar mas acredito que não esteja funcional

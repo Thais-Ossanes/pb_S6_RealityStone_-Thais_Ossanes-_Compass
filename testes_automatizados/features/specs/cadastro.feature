@@ -10,23 +10,22 @@ Funcionalidade: Cadastrar novo usuário
     PARA poder logar no banco
 
 Contexto: Não possuir cadastro
-    Dado que não possua cadastro #se possuir cadastro retorna mensagem de erro
+    Dado que esteja na home #se possuir cadastro retorna mensagem de erro
                                  #ele acusa apenas o nome 'This username already exists.''
 @accessing_registration_page
 Cenário: Acessar a página de cadastro
-    Dado que esteja na home
-    Quando clicar na opção "<Register>"
-    Então deverá direcionar para a página de cadastro
+    Quando clicar na opção de registrar
+    Então deverá direcionar para a página de cadastro #expect /talurl
 
 @creat_account
 Esquema do Cenário: Preencher o formulario
-    Dado que esteja na página de cadastro
-    Quando preencher o "<formulario>" corretamente
-    E clicar no botão "<register>"
+    Dado que esteja na página de cadastro #talurl
+    Quando preencher o "<formulario>" corretamente "<valid_information>"
+    E clicar no botão de registrar
     Então deverá aparecer a mensagem de sucesso
 
-    |   formulario   |
-    |first_name      |
+    |   formulario   | 
+    |first_name      | 
     |last_name       |
     |address         |
     |city            |

@@ -13,7 +13,7 @@ Cenário: Validações da home
 
 @testing_menu_left
     Esquema do Cenário: Testando menu esquerdo do header
-        Quando clicar na opção do menu <opcao_menu>
+        Quando clicar na opção do menu "<opcao_menu>"
         Então deverá direcionar para fora da home 
 
     Exemplos:

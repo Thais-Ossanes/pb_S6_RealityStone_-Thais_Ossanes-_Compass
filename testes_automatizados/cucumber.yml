@@ -1,9 +1,9 @@
 
-default: --format pretty -p prd -p chrome -p hml
+default: --format pretty -p prd -p chrome -p html
 default_hml: -p hml p chrome
 
 #Reporters
-#html: --format html --out=reports/report.html
+html: --format html --out=reports/report.html
 
 # enviroments
 hml: ENVIRONMENT="hml"
